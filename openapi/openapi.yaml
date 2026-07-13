@@ -1,0 +1,79 @@
+openapi: 3.0.3
+info:
+  title: Enterprise AI Platform Planes
+  version: 1.0.0
+  description: >
+    Versioned facade over five planes (data, model, knowledge, orchestration, control).
+    Applications must not call model providers directly.
+servers:
+  - url: http://localhost:8088
+paths:
+  /v1/platform:
+    get:
+      summary: Discover planes and portfolio wiring
+      responses:
+        "200":
+          description: Platform description
+  /v1/models:
+    get:
+      summary: Approved model catalog
+      responses:
+        "200":
+          description: Model list
+  /v1/chat:
+    post:
+      summary: Chat via model gateway
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [messages]
+              properties:
+                messages:
+                  type: array
+                  items:
+                    type: object
+                route_preference:
+                  type: string
+                  enum: [cost, latency, quality, balanced]
+                correlation_id:
+                  type: string
+      responses:
+        "200":
+          description: Chat response
+  /v1/retrieve:
+    post:
+      summary: Knowledge plane retrieval
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [query]
+              properties:
+                query:
+                  type: string
+                top_k:
+                  type: integer
+      responses:
+        "200":
+          description: Retrieved chunks
+  /v1/orchestrate:
+    post:
+      summary: Orchestration plane agent run
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [goal]
+              properties:
+                goal:
+                  type: string
+      responses:
+        "200":
+          description: Orchestration result

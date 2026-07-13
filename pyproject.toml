@@ -1,0 +1,14 @@
+[project]
+name = "enterprise-ai-platform-planes"
+version = "0.1.0"
+description = "Five-plane enterprise AI architecture — model gateway, knowledge, orchestration, control, and versioned platform facade"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+api = ["fastapi>=0.110", "uvicorn>=0.27", "pydantic>=2.0"]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
