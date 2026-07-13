@@ -102,7 +102,7 @@ PYTHONPATH=src uvicorn ai_planes.api:app --reload --port 8088
 - [`docs/SYSTEM-DESIGN.md`](docs/SYSTEM-DESIGN.md) — planes, SLOs, request path
 - [`docs/PORTFOLIO-WIRING.md`](docs/PORTFOLIO-WIRING.md) — maps to existing GitHub repos
 - [`docs/INDUSTRY-APPLICABILITY.md`](docs/INDUSTRY-APPLICABILITY.md) — retail / banking / healthcare
-- **[`docs/DECISION-MATRIX-MODELS-FRAMEWORKS.md`](docs/DECISION-MATRIX-MODELS-FRAMEWORKS.md)** — model & framework decision matrix (interview + ATRC)
+- **[`docs/DECISION-MATRIX-MODELS-FRAMEWORKS.md`](docs/DECISION-MATRIX-MODELS-FRAMEWORKS.md)** — model & framework decision matrix (catalog / gateway)
 - ADRs: [`docs/adr/`](docs/adr/)
 
 ## Toolbox

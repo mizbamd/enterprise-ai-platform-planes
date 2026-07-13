@@ -104,13 +104,7 @@ Product team  →  versioned API / SDK  →  Model Gateway  →  Approved catalo
 
 ---
 
-## 4. One-page interview answer (optional)
-
-> I use a decision matrix rather than the most fashionable model. For models I score task quality, latency, context, residency/privacy, tool/structured output, **cost per successful transaction**, eval performance, and portability. For frameworks I score workflow/state, checkpointing, tool authorization, HITL, tracing/eval, deployment maturity, and learning curve. An **approved catalog and model gateway** mean product teams take policy-routed capabilities—not a hard-coded provider. Small models for extraction/classification; larger models only when evaluations prove incremental business value.
-
----
-
-## Related repos
+## 4. Related repos
 
 | Repo | Role |
 |---|---|
